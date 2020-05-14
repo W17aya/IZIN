@@ -128,7 +128,7 @@ return [
     'import_page_title' => 'Import Data :module',
     'dashboard_default_text' => 'Welcome to the dashboard of :appname',
     'form_back_to_list' => 'Back To List Data :module',
-    'not_logged_in' => 'You are not logged in !',
+    'not_logged_in' => 'Kamu belum Login !',
     'menu_navigation' => "Navigation",
     'table_data_not_found' => "No Data Avaliable",
     "notice_delete_file_upload" => "* If you want to upload other file, please first delete the file.",
@@ -170,7 +170,7 @@ return [
     'Log_User_Access' => 'Log User Access',
     'SUPERADMIN' => 'SUPERADMIN',
 
-    'click_here' => 'Click here',
+    'click_here' => 'Klik Disini',
 
     /*
      * this is for html direction to use in html and css classes like :
