@@ -1,9 +1,9 @@
 <?php
 return [
     'email_footer' => 'Do not reply any email to this email address. This email sent automatically by our system. ',
-    'login_message' => 'Please login to start your session',
-    'text_forgot_password' => 'Forgot the password ?',
-    'page_title_login' => 'Login Panel',
+    'login_message' => 'Silahkan Login Untuk Masuk',
+    'text_forgot_password' => 'Lupa Password ?',
+    'page_title_login' => 'Permohonan Izin Online',
     'page_title_forgot' => 'Forgot Password',
     'forgot_message' => 'Enter your email address, to request password',
     "forgot_text_try_again" => "Try login again ?",
