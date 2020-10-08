@@ -5,14 +5,14 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminCmsUsers35Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminPembelianTiketController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "name";
+			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = "id,desc";
+			$this->orderby = "kode_booking,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -24,38 +24,46 @@
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
-			$this->button_export = false;
-			$this->table = "cms_users";
+			$this->button_export = true;
+			$this->table = "pembelian_tiket";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
-			$this->col = [];
-			$this->col[] = ["label"=>"Name","name"=>"name"];
-			$this->col[] = ["label"=>"Photo","name"=>"photo","image"=>true];
-			$this->col[] = ["label"=>"Email","name"=>"email"];
-			$this->col[] = ["label"=>"Privileges","name"=>"id_cms_privileges","join"=>"cms_privileges,name"];
+	        $this->col = [];
+			$this->col[] = array("label"=>"Kode Booking","name"=>"kode_booking");
+		$this->col[] = array("label"=>"Nama","name"=>"Nama" );
+		$this->col[] = array("label"=>"No Telp","name"=>"no_telp" );
+		$this->col[] = array("label"=>"Jumlah","name"=>"Jumlah" );
+		$this->col[] = array("label"=>"Tgl Keberangkatan","name"=>"tgl_keberangkatan" );
+		$this->col[] = array("label"=>"Jenis","name"=>"jenis" );
+		$this->col[] = array("label"=>"Tujuan","name"=>"tujuan" );
+
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Anda hanya dapat memasukkan huruf saja'];
-			$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'Tipe file yang didukung: JPG, JPEG, PNG, GIF, BMP'];
-			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:cms_users','width'=>'col-sm-10','placeholder'=>'Mohon input alamat email dengan benar'];
-			$this->form[] = ['label'=>'Password','name'=>'password','type'=>'password','validation'=>'min:3|max:32','width'=>'col-sm-10','help'=>'Minimal 5 karakter. Tinggalkan jika anda tidak mengubahnya'];
-			$this->form[] = ['label'=>'Instansi','name'=>'instansi','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'tb_instansi,nama'];
-			$this->form[] = ['label'=>'Cms Privileges','name'=>'id_cms_privileges','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cms_privileges,name'];
-			$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Kode Booking','name'=>'kode_booking','type'=>'text','validation'=>'required','width'=>'col-sm-9','readonly'=>'1','value'=>'/UNISKA'];
+			$this->form[] = ['label'=>'Nama','name'=>'Nama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'No Telp','name'=>'no_telp','type'=>'number','validation'=>'required|numeric','width'=>'col-sm-10','placeholder'=>'Anda hanya dapat memasukkan angka saja'];
+			$this->form[] = ['label'=>'Jumlah','name'=>'Jumlah','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Tgl Keberangkatan','name'=>'tgl_keberangkatan','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Pesawat','name'=>'pesawat','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'GARUDA;LION AIR;SRIWIJAYA'];
+			$this->form[] = ['label'=>'Jenis','name'=>'jenis','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'SEKALI PERGI;PULANG-PERGI'];
+			$this->form[] = ['label'=>'Jenis','name'=>'tujuan','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'JOGJA;PALEMBANG;JAKARTA;BANJARMASIN'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Anda hanya dapat memasukkan huruf saja'];
-			//$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'Tipe file yang didukung: JPG, JPEG, PNG, GIF, BMP'];
-			//$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:cms_users','width'=>'col-sm-10','placeholder'=>'Mohon input alamat email dengan benar'];
-			//$this->form[] = ['label'=>'Password','name'=>'password','type'=>'password','validation'=>'min:3|max:32','width'=>'col-sm-10','help'=>'Minimal 5 karakter. Tinggalkan jika anda tidak mengubahnya'];
-			//$this->form[] = ['label'=>'Instansi','name'=>'instansi','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'tb_instansi,nama'];
-			//$this->form[] = ['label'=>'Cms Privileges','name'=>'id_cms_privileges','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cms_privileges,name'];
-			//$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Kode Booking','name'=>'kode_booking','type'=>'text','validation'=>'required','width'=>'col-sm-9','value'=>'/UNISKA'];
+			//$this->form[] = ['label'=>'Nama','name'=>'Nama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'No Telp','name'=>'no_telp','type'=>'number','validation'=>'required|numeric','width'=>'col-sm-10','placeholder'=>'Anda hanya dapat memasukkan angka saja'];
+			//$this->form[] = ['label'=>'Jumlah','name'=>'Jumlah','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Tgl Keberangkatan','name'=>'tgl_keberangkatan','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Pesawat','name'=>'pesawat','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'GARUDA;LION AIR;SRIWIJAYA'];
+			//$this->form[] = ['label'=>'Jenis','name'=>'jenis','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'SEKALI PERGI;PULANG-PERGI'];
+			//$this->form[] = ['label'=>'Jenis','name'=>'tujuan','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'JOGJA;PALEMBANG;JAKARTA;BANJARMASIN'];
+			# OLD END FORM
+
 			# OLD END FORM
 
 			/* 

@@ -19,8 +19,8 @@
 			$this->button_action_style = "button_icon";
 			$this->button_add = true;
 			$this->button_edit = true;
-			$this->button_delete = true;
-			$this->button_detail = true;
+			$this->button_delete = false;
+			$this->button_detail = false;
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
@@ -40,8 +40,8 @@
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'No Surat','name'=>'no_surat','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Jenis','name'=>'jenis_surat','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'jenis_penahanan,nama_jenis'];
-			$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'tb_instansi,nama'];
+			$this->form[] = ['label'=>'Jenis','name'=>'jenis_surat','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'IZIN PENAHANAN;PENAMBAHAN PENAHANAN'];
+			// $this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'tb_instansi,nama'];
 			$this->form[] = ['label'=>'Tgl Surat','name'=>'tgl_surat','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'File 1','name'=>'file_1','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'File 2','name'=>'file_2','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];

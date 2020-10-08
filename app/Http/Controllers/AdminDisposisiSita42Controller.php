@@ -348,7 +348,7 @@
 // 		$data['detail_transaksipembelian'] = DB::table('detail_transaksipembelian')
 // 					->where('transaksipembelian_id',$id)
 // 					->get();
-		$pdf = PDF::loadView('cetaktransaksi',$data)
+		$pdf = PDF::loadView('disposisisita',$data)
 					->setPaper('a4', 'potrait');
 		  
 					  

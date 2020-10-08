@@ -31,12 +31,12 @@
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Tujuan","name"=>"tujuan"];
-			$this->col[] = ["label"=>"Isi Disposisi","name"=>"isi_disposisi"];
 			$this->col[] = ["label"=>"Sifat","name"=>"sifat"];
 			$this->col[] = ["label"=>"Batas Waktu","name"=>"batas_waktu"];
 			$this->col[] = ["label"=>"Catatan","name"=>"catatan"];
 			$this->col[] = ["label"=>"Surat","name"=>"id_surat"];
 			$this->col[] = ["label"=>"Keterangan","name"=>"keterangan"];
+			$this->col[] = ["label"=>"Isi Disposisi","name"=>"ringkasan"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -53,14 +53,14 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Tujuan","name"=>"tujuan","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Isi Disposisi","name"=>"isi_disposisi","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Sifat","name"=>"sifat","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Batas Waktu","name"=>"batas_waktu","type"=>"date","required"=>TRUE,"validation"=>"required|date"];
-			//$this->form[] = ["label"=>"Catatan","name"=>"catatan","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Surat","name"=>"id_surat","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"surat,id"];
-			//$this->form[] = ["label"=>"Keterangan","name"=>"keterangan","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"User","name"=>"user","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ['label'=>'Tujuan','name'=>'tujuan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Isi Disposisi','name'=>'isi_disposisi','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Sifat','name'=>'sifat','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Batas Waktu','name'=>'batas_waktu','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Catatan','name'=>'catatan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Surat','name'=>'id_surat','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Keterangan','name'=>'keterangan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'User','name'=>'user','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# OLD END FORM
 
 			/* 

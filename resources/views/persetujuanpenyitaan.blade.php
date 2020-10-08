@@ -8,7 +8,7 @@
   <body>
     <div class="box-body">
       <div id='print_area'>
-        @foreach ($geledah as $b)
+        @foreach ($sita as $b)
 		
         @endforeach
 		<img style="width:80;float:left" src="http://pnbjb-izin.com/public/assets/download.jpg" alt="logo-pn"> 
@@ -77,7 +77,7 @@ surat permohonan Penyidik Nomor </span></font></font><font face="Arial, serif"><
 </span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">tanggal
 </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
 tentang  persetujuan penyitaan terhadap
-</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
+</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">{{$b->keterangan}}</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
 yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></font></font></p>
 <dl>
 	<dl>
@@ -186,31 +186,11 @@ yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></fo
 	</dl>
 </dl>
 <p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Menimbang,
-bahwa berdasarkan laporan dari Penyidik </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-tanggal </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-telah dilakukan penyitaan dengan alasan keadaan yang sangat perlu dan
-mendesak;</span></font></font></p>
-<p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Menimbang,
-bahwa setelah mempelajari uraian singkat kejadian perkara dan Berita
-Acara Penyitaan Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-tanggal </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-maka penyitaan tersebut cukup alasan untuk disetujui;</span></font></font></p>
-<p align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Memperhatikan
-Pasal 38  ayat (2) Undang-Undang Nomor 8 tahun 1981 tentang Hukum
-Acara Pidana;</span></font></font></p>
-<p class="western" align="center" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><b>M
-E N E T A P K A N</b></span></font></font></p>
-<p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
 <font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Memberi
 persetujuan penyitaan terhadap </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
 yang telah dilakukan oleh Penyidik sesuai Berita Acara Penyitaan
-Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-tanggal </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</span></span></font></font></p>
+Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->no_surat}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
+tanggal </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->tgl_surat}}</span></span></font></font></p>
 <p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
 <font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">				</span></font></font></p>
 <table width="567" cellpadding="7" cellspacing="0">

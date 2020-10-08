@@ -3,12 +3,12 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
-     <title>Penolakan Penggeledahan</title>
+     <title>Persetujuan Penahanan</title>
   </head>
   <body>
     <div class="box-body">
       <div id='print_area'>
-        @foreach ($geledah as $b)
+        @foreach ($penahanan as $b)
 		
         @endforeach
 		<img style="width:80;float:left" src="http://pnbjb-izin.com/public/assets/download.jpg" alt="logo-pn"> 
@@ -55,7 +55,8 @@
 <font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><b>P
 E N E T A P A N</b></span></font></font></p>
 <p class="western" align="center" style="margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Nomor :	{{$b->id}}/Pen.Pid/2020/PN Bjb</span></font></font></p>
+<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Nomor
+    {{$b->id}}/Pen.Pid/2020/PN Bjb</span></font></font></p>
 <p class="western" align="center" style="text-indent: 0.59in; margin-bottom: 0in; letter-spacing: -0.4pt; line-height: 150%">
 <br/>
 
@@ -65,17 +66,17 @@ E N E T A P A N</b></span></font></font></p>
 KEADILAN BERDASARKAN KETUHANAN YANG MAHA ESA</b></span></font></font></p>
 <p align="justify" style="text-indent: 0.5in; margin-bottom: 0in; letter-spacing: -0.4pt; line-height: 150%">
 <br/>
+
+</p>
 <p align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
 <font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Wakil
 Ketua Pengadilan Negeri Banjarbaru;</span></font></font></p>
 <p align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
 <font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Membaca
-surat permohonan Penyidik Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">	{{$b->no_surat_permohonan}}</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID">
+surat permohonan Penyidik Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">{{$b->no_surat_permohonan}}</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID">
 </span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">tanggal
-</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">	{{$b->tgl_surat}}.</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-tentang  persetujuan Penggeledahan
-</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">{{$b->keterangan}}</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></font></font></p>
+</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">{{$b->tgl_surat}}.</span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
+tentang  persetujuan penahanan yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></font></font></p>
 <dl>
 	<dl>
 		<dd>
@@ -95,7 +96,7 @@ yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></fo
 					<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID">:</span></span></font></font></p>
 				</td>
 				<td width="333" style="border: none; padding: 0in"><p align="justify">
-					<span style="letter-spacing: -0.4pt">	{{$b->nama}}</span></p>
+					<span style="letter-spacing: -0.4pt">{{$b->nama}}</span></p>
 				</td>
 			</tr>
 			<tr valign="top">
@@ -107,7 +108,7 @@ yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></fo
 					<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID">:</span></span></font></font></p>
 				</td>
 				<td width="333" style="border: none; padding: 0in"><p align="justify">
-					<span style="letter-spacing: -0.4pt">	{{$b->tempat_lahir}}</span></p>
+					<span style="letter-spacing: -0.4pt">{{$b->tempat_lahir}}</span></p>
 				</td>
 			</tr>
 			<tr valign="top">
@@ -119,7 +120,7 @@ yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></fo
 					<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID">:</span></span></font></font></p>
 				</td>
 				<td width="333" style="border: none; padding: 0in"><p align="justify">
-					<span style="letter-spacing: -0.4pt">{{$b->umur}}</span></p>
+					<span style="letter-spacing: -0.4pt">{{$b->Umur}}</span></p>
 				</td>
 			</tr>
 			<tr valign="top">
@@ -130,8 +131,8 @@ yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></fo
 				<td width="5" style="border: none; padding: 0in"><p align="justify">
 					<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID">:</span></span></font></font></p>
 				</td>
-				<td width="333" style="border: none; padding: 0in"><p align="justify">{{$b->jenis_kelamin}}
-					<span style="letter-spacing: -0.4pt"></span></p>
+				<td width="333" style="border: none; padding: 0in"><p align="justify">
+					<span style="letter-spacing: -0.4pt">{{$b->jenis_kelamin}}</span></p>
 				</td>
 			</tr>
 			<tr valign="top">
@@ -187,26 +188,23 @@ yang diperlukan untuk kepentingan penyidikan dalam perkara Tersangka:</span></fo
 bahwa berdasarkan laporan dari Penyidik </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->pemohon}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
 Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->no_surat_permohonan}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
 tanggal </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->tgl_surat}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-telah dilakukan penggeledahan dengan alasan keadaan yang sangat perlu dan
+telah dilakukan penahanan dengan alasan keadaan yang sangat perlu dan
 mendesak;</span></font></font></p>
 <p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
 <font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Menimbang,
 bahwa setelah mempelajari uraian singkat kejadian perkara dan Berita
-Acara Penggeledahan Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->no_surat_permohonan}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
+Acara Penahanan Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->no_surat_permohonan}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
 tanggal </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->tgl_surat}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-maka Penggeledahan tersebut cukup alasan untuk tidak disetujui;</span></font></font></p>
-<p align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Memperhatikan
-Pasal 34  Undang-Undang Nomor 8 tahun 1981 tentang Hukum
-Acara Pidana;</span></font></font></p>
+maka penahanan tersebut cukup alasan untuk disetujui;</span></font></font></p>
+
+<p class="western" align="center" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
+<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><b>M
+E N E T A P K A N</b></span></font></font></p>
 <p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><b>
-M E N E T A P K A N</b></span></font></font></p>
-<p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
-<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Menolak Memberi
-persetujuan Penggeledahan  </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->keterangan}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
-yang telah dilakukan oleh Penyidik sesuai Berita Acara Penggeledahan
-Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->no_surat}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
+<font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">Memberi
+persetujuan penahanan terhadap </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->nama}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
+yang telah dilakukan oleh Penyidik sesuai Berita Acara Penahanan
+Nomor </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">    {{$b->no_surat_permohonan}}</span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">
 tanggal </span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID">{{$b->tgl_surat}}</span></span></font></font></p>
 <p class="western" align="justify" style="text-indent: 0.59in; margin-bottom: 0in; line-height: 150%">
 <font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt">				</span></font></font></p>
@@ -236,9 +234,7 @@ tanggal </span></font></font><font face="Arial, serif"><font size="3" style="fon
 			<br/>
 
 			</p>
-			
-			<p class="western" align="center"><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID"><u><b>L
-				USI EMMI WATI KUSUMAWATI,</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID"><u><b>
+			<p class="western" align="center"><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID"><u><b>LUSI EMMI KUSUMATI,</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID"><u><b>
 			</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID"><u><b>S</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID"><u><b>.</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID"><u><b>H.</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID"><u><b>,
 			</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID"><u><b>M</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID"><u><b>.</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="id-ID"><u><b>H</b></u></span></span></font></font><font face="Arial, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: -0.4pt"><span lang="en-ID"><u><b>.</b></u></span></span></font></font></p>
 		</td>

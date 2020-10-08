@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminCmsUsers35Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminDetilSita49Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "name";
+			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -24,38 +24,61 @@
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
-			$this->button_export = false;
-			$this->table = "cms_users";
+			$this->button_export = true;
+			$this->table = "detil_sita";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Name","name"=>"name"];
-			$this->col[] = ["label"=>"Photo","name"=>"photo","image"=>true];
-			$this->col[] = ["label"=>"Email","name"=>"email"];
-			$this->col[] = ["label"=>"Privileges","name"=>"id_cms_privileges","join"=>"cms_privileges,name"];
+			$this->col[] = ["label"=>"Jenis","name"=>"jenis_surat"];
+			$this->col[] = ["label"=>"Pemohon","name"=>"pemohon"];
+			$this->col[] = ["label"=>"Tgl Surat","name"=>"tgl_surat"];
+			// $this->col[] = ["label"=>"Nomor Surat Permohonan","name"=>"nomor_surat_permohonan"];
+			// $this->col[] = ["label"=>"Tgl Eksekusi","name"=>"tgl_eksekusi"];
+			$this->col[] = ["label"=>"Nomor Surat Perintah","name"=>"nomor_surat_perintah"];
+			$this->col[] = ["label"=>"Keterangan","name"=>"keterangan"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Anda hanya dapat memasukkan huruf saja'];
-			$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'Tipe file yang didukung: JPG, JPEG, PNG, GIF, BMP'];
-			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:cms_users','width'=>'col-sm-10','placeholder'=>'Mohon input alamat email dengan benar'];
-			$this->form[] = ['label'=>'Password','name'=>'password','type'=>'password','validation'=>'min:3|max:32','width'=>'col-sm-10','help'=>'Minimal 5 karakter. Tinggalkan jika anda tidak mengubahnya'];
-			$this->form[] = ['label'=>'Instansi','name'=>'instansi','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'tb_instansi,nama'];
-			$this->form[] = ['label'=>'Cms Privileges','name'=>'id_cms_privileges','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cms_privileges,name'];
-			$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'ID','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'geledah','datamodal_columns'=>'id,no_surat,tgl_surat,pemohon,jenis_surat,nama','datamodal_columns_alias'=>'No surat,Tanggal surat, Asal surat,Jenis surat','datamodal_select_to'=>'ID:id,nama:Nama,pemohon:pemohon,jenis_surat:jenis_surat,jenis_kelamin:jenis_kelamin,kebangsaan:kebangsaan,tempat_tinggal:Tempat_tinggal,tgl_surat:tgl_surat,no_surat:no_surat_permohonan,agama:agama,tgl_lahir:tgl_lahir,pekerjaan:pekerjaan,tempat_lahir:tempat_lahir'];
+			$this->form[] = ['label'=>'No Surat','name'=>'no_surat_permohonan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Jenis Permohonan','name'=>'jenis_surat','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Tgl Surat','name'=>'tgl_surat','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nomor Surat Perintah','name'=>'nomor_surat_perintah','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Keterangan','name'=>'keterangan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Jenis Pihak','name'=>'Jenis_Pihak','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'TERSANGKA;SAKSI'];
+			$this->form[] = ['label'=>'Nama','name'=>'Nama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Tempat Lahir','name'=>'Tempat_Lahir','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Tgl Lahir','name'=>'tgl_lahir','type'=>'text','validation'=>'required|date','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Kebangsaan','name'=>'kebangsaan','type'=>'text','validation'=>'required|','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Jenis kelamin','name'=>'jenis_kelamin','type'=>'text','validation'=>'required|','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Tempat Tinggal','name'=>'Tempat_tinggal','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Agama','name'=>'agama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'ISLAM;KRISTEN;KATOLIK;HINDU;BUDHA;KONGHUCU'];
+			$this->form[] = ['label'=>'Pekerjaan','name'=>'pekerjaan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Name','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Anda hanya dapat memasukkan huruf saja'];
-			//$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'Tipe file yang didukung: JPG, JPEG, PNG, GIF, BMP'];
-			//$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:cms_users','width'=>'col-sm-10','placeholder'=>'Mohon input alamat email dengan benar'];
-			//$this->form[] = ['label'=>'Password','name'=>'password','type'=>'password','validation'=>'min:3|max:32','width'=>'col-sm-10','help'=>'Minimal 5 karakter. Tinggalkan jika anda tidak mengubahnya'];
-			//$this->form[] = ['label'=>'Instansi','name'=>'instansi','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'tb_instansi,nama'];
-			//$this->form[] = ['label'=>'Cms Privileges','name'=>'id_cms_privileges','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'cms_privileges,name'];
-			//$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'No surat permohonan','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'geledah','datamodal_columns'=>'no_surat,tgl_surat,pemohon,jenis_surat,','datamodal_columns_alias'=>'No surat,Tanggal surat, Asal surat,Jenis surat','datamodal_select_to'=>'pemohon:pemohon,jenis_surat:jenis_surat,tgl_surat:tgl_surat,no_surat:id_surat,nama:nama,tempat_lahir:tempat_lahir,jenis_kelamin:jenis_kelamin'];
+			//$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Jenis Permohonan','name'=>'jenis_surat','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Tgl Surat','name'=>'tgl_surat','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			//// $this->form[] = ['label'=>'Nomor Surat Permohonan','name'=>'nomor_surat_permohonan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//// $this->form[] = ['label'=>'Tgl Eksekusi','name'=>'tgl_eksekusi','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Nomor Surat Perintah','name'=>'nomor_surat_perintah','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Keterangan','name'=>'keterangan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//// $this->form[] = ['label'=>'Dokumen Permohonan','name'=>'Dokumen_Permohonan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//// $this->form[] = ['label'=>'Dokumen Penetapan','name'=>'Dokumen_Penetapan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Jenis Pihak','name'=>'Jenis_Pihak','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'pihak,nama'];
+			//$this->form[] = ['label'=>'Jenis Pihak','name'=>'Jenis_Pihak','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'pihak,nama'];
+			//$this->form[] = ['label'=>'Nama','name'=>'Nama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Tempat Lahir','name'=>'Tempat_Lahir','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Tgl Lahir','name'=>'tgl_lahir','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Tempat Tinggal','name'=>'Tempat_tinggal','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Agama','name'=>'agama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Pekerjaan','name'=>'pekerjaan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# OLD END FORM
 
 			/* 
