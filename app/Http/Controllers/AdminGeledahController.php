@@ -47,7 +47,7 @@
 			$this->form[] = ['label'=>'Jenis Surat','name'=>'jenis_surat','type'=>'select2','validation'=>'required','width'=>'col-sm-9','dataenum'=>'IZIN PENGGELEDAHAN;PERSETUJUAN PENGGELEDAHAN;PENOLAKAN IZIN PENGGELEDAHAN'];
 			$this->form[] = ['label'=>'Nama','name'=>'nama','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Tempat Lahir','name'=>'tempat_lahir','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Tanggal lahir','name'=>'umur','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Umur','name'=>'umur','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Jenis Kelamin','name'=>'jenis_kelamin','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'LAKI-LAKI;PEREMPUAN'];
 			$this->form[] = ['label'=>'Kebangsaan','name'=>'kebangsaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Tempat Tinggal','name'=>'tempat_tinggal','type'=>'text','validation'=>'required','width'=>'col-sm-9'];

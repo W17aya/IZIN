@@ -20,7 +20,7 @@
 			$this->button_action_style = "button_icon";
 			$this->button_add = true;
 			$this->button_edit = false;
-			$this->button_delete = true;
+			$this->button_delete = false;
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
@@ -31,7 +31,7 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"No Surat","name"=>"no_surat"];
+			$this->col[] = ["label"=>"No Surat","name"=>"no_surat_permohonan"];
 			$this->col[] = ["label"=>"Tgl Surat","name"=>"tgl_surat"];
 			$this->col[] = ["label"=>"Nama","name"=>"nama"];
 			$this->col[] = ["label"=>"Jenis Kelamin","name"=>"jenis_kelamin"];
@@ -39,35 +39,34 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'ID','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'detil_geledah','datamodal_columns'=>'id,no_surat,tgl_surat,pemohon,jenis_surat,','datamodal_select_to'=>'ID:id,tgl_lahir:tgl_lahir,no_surat_permohonan:no_surat,pemohon:pemohon,jenis_surat:jenis_surat,tgl_surat:tgl_surat,nama:nama,umur:umur,Nama:nama,keterangan:keterangan,pekerjaan:pekerjaan,agama:agama,jenis_kelamin:jenis_kelamin,kebangsaan:kebangsaan,Tempat_tinggal:tempat_tinggal,tempat_lahir:Tempat_lahir'];
+			$this->form[] = ['label'=>'ID','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'geledah','datamodal_columns'=>'id,no_surat,tgl_surat,pemohon,jenis_surat,','datamodal_select_to'=>'ID:id,pemohon:pemohon,jenis_surat:jenis_surat,tgl_surat:tgl_surat,no_surat:no_surat_permohonan,nama:nama,umur:umur,pekerjaan:pekerjaan,agama:agama,jenis_kelamin:jenis_kelamin,kebangsaan:kebangsaan,tempat_tinggal:tempat_tinggal,tempat_lahir:tempat_lahir'];
+			$this->form[] = ['label'=>'No Surat','name'=>'no_surat_permohonan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Tgl Surat','name'=>'tgl_surat','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Nama','name'=>'nama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Tempat Lahir','name'=>'tempat_lahir','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Umur','name'=>'tgl_lahir','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'keterangan','name'=>'keterangan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
+			$this->form[] = ['label'=>'Umur','name'=>'umur','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Jenis Kelamin','name'=>'jenis_kelamin','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Kebangsaan','name'=>'kebangsaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Tempat Tinggal','name'=>'tempat_tinggal','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Agama','name'=>'agama','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			$this->form[] = ['label'=>'Pekerjaan','name'=>'pekerjaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'No Surat Permohonan','name'=>'no_surat','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'ID','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'geledah','datamodal_columns'=>'id,no_surat,tgl_surat,pemohon,jenis_surat,','datamodal_select_to'=>'ID:id,tgl_lahir:tgl_lahir,pemohon:pemohon,jenis_surat:jenis_surat,tgl_surat:tgl_surat,no_surat:no_surat,nama:nama,umur:umur,pekerjaan:pekerjaan,agama:agama,jenis_kelamin:jenis_kelamin,kebangsaan:kebangsaan,tempat_tinggal:tempat_tinggal,tempat_lahir:tempat_lahir'];			$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'ID','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'geledah','datamodal_columns'=>'id,no_surat,tgl_surat,pemohon,jenis_surat,'];
+			//$this->form[] = ['label'=>'No Surat','name'=>'no_surat_permohonan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Tgl Surat','name'=>'tgl_surat','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Nama','name'=>'nama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Tempat Lahir','name'=>'tempat_lahir','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Umur','name'=>'tgl_lahir','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
+			//$this->form[] = ['label'=>'Umur','name'=>'umur','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Jenis Kelamin','name'=>'jenis_kelamin','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Kebangsaan','name'=>'kebangsaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Tempat Tinggal','name'=>'tempat_tinggal','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Agama','name'=>'agama','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			//$this->form[] = ['label'=>'Pekerjaan','name'=>'pekerjaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'No Surat Permohonan','name'=>'no_surat','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
 			# OLD END FORM
 
 			/* 

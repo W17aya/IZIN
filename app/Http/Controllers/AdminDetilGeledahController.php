@@ -24,7 +24,7 @@
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
-			$this->button_export = true;
+			$this->button_export = false;
 			$this->table = "detil_geledah";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
@@ -41,7 +41,7 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'ID','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'geledah','datamodal_columns'=>'id,no_surat,tgl_surat,pemohon,jenis_surat,nama','datamodal_columns_alias'=>'No surat,Tanggal surat, Asal surat,Jenis surat','datamodal_select_to'=>'ID:id,nama:Nama,pemohon:pemohon,jenis_surat:jenis_surat,jenis_kelamin:jenis_kelamin,kebangsaan:kebangsaan,tempat_tinggal:Tempat_tinggal,tgl_surat:tgl_surat,no_surat:no_surat_permohonan,agama:agama,tgl_lahir:tgl_lahir,pekerjaan:pekerjaan,tempat_lahir:tempat_lahir'];
+			$this->form[] = ['label'=>'ID','name'=>'id','type'=>'datamodal','validation'=>'required|required','width'=>'col-sm-10','datamodal_table'=>'geledah','datamodal_columns'=>'id,no_surat,tgl_surat,pemohon,jenis_surat,nama','datamodal_columns_alias'=>'No surat,Tanggal surat, Asal surat,Jenis surat','datamodal_select_to'=>'ID:id,nama:Nama,pemohon:pemohon,jenis_surat:jenis_surat,tgl_surat:tgl_surat,no_surat:no_surat_permohonan,agama:agama,tgl_lahir:tgl_lahir'];
 			$this->form[] = ['label'=>'No Surat','name'=>'no_surat_permohonan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Jenis Permohonan','name'=>'jenis_surat','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
@@ -52,8 +52,6 @@
 			$this->form[] = ['label'=>'Nama','name'=>'Nama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Tempat Lahir','name'=>'Tempat_Lahir','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Tgl Lahir','name'=>'tgl_lahir','type'=>'text','validation'=>'required|date','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Kebangsaan','name'=>'kebangsaan','type'=>'text','validation'=>'required|','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Jenis kelamin','name'=>'jenis_kelamin','type'=>'text','validation'=>'required|','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Tempat Tinggal','name'=>'Tempat_tinggal','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Agama','name'=>'agama','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'ISLAM;KRISTEN;KATOLIK;HINDU;BUDHA;KONGHUCU'];
 			$this->form[] = ['label'=>'Pekerjaan','name'=>'pekerjaan','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
