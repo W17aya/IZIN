@@ -14,15 +14,15 @@
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
-			$this->button_table_action = false;
-			$this->button_bulk_action = false;
+			$this->button_table_action = true;
+			$this->button_bulk_action = true;
 			$this->button_action_style = "button_icon";
 			$this->button_add = true;
-			$this->button_edit = false;
-			$this->button_delete = false;
-			$this->button_detail = false;
-			$this->button_show = false;
-			$this->button_filter = false;
+			$this->button_edit = true;
+			$this->button_delete = true;
+			$this->button_detail = true;
+			$this->button_show = true;
+			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
 			$this->table = "geledah";
@@ -30,60 +30,16 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Tgl Surat","name"=>"tgl_surat"];
-			$this->col[] = ["label"=>"No Surat","name"=>"no_surat"];
-			$this->col[] = ["label"=>"Penyidik","name"=>"pemohon"];
-			$this->col[] = ["label"=>"Pemohon","name"=>"id_penyidik","join"=>"cms_users,id_instansi"];
-			$this->col[] = ["label"=>"Jenis Surat","name"=>"jenis_surat"];
-			$this->col[] = ["label"=>"Status","name"=>"status"];
+			$this->col[] = ["label"=>"Id","name"=>"id"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'No Surat','name'=>'no_surat','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'hidden','validation'=>'required','width'=>'col-sm-10','value'=>CRUDBooster::myName()];
-			$this->form[] = ['label'=>'Instansi','name'=>'id_penyidik','type'=>'hidden','validation'=>'required','width'=>'col-sm-9','value'=>CRUDBooster::myId()];
-			$this->form[] = ['label'=>'Tgl Surat','name'=>'tgl_surat','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Jenis Surat','name'=>'jenis_surat','type'=>'select2','validation'=>'required','width'=>'col-sm-9','dataenum'=>'IZIN PENGGELEDAHAN;PERSETUJUAN PENGGELEDAHAN;PENOLAKAN IZIN PENGGELEDAHAN'];
-			$this->form[] = ['label'=>'Nama','name'=>'nama','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Tempat Lahir','name'=>'tempat_lahir','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Umur','name'=>'umur','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Jenis Kelamin','name'=>'jenis_kelamin','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'LAKI-LAKI;PEREMPUAN'];
-			$this->form[] = ['label'=>'Kebangsaan','name'=>'kebangsaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Tempat Tinggal','name'=>'tempat_tinggal','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Agama','name'=>'agama','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'ISLAM;KRISTEN;KATOLIK;HINDU;BUDHA'];
-			$this->form[] = ['label'=>'Pekerjaan','name'=>'pekerjaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Surat permohonan geledah','name'=>'file_1','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'dokumen laporan polisi','name'=>'file_2','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'surat perintah penyelidikan','name'=>'file_3','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'surat perintah geledah','name'=>'file_4','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'surat perintah dimulainya penyidikan','name'=>'file_5','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'berita acara','name'=>'file_6','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','validation'=>'required','width'=>'col-sm-9','readonly'=>'1','value'=>'BARU'];
+			$this->form[] = ['label'=>'Id','name'=>'id','validation'=>'required','width'=>'col-sm-9'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'No Surat','name'=>'no_surat','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Pemohon','name'=>'pemohon','type'=>'hidden','validation'=>'required','width'=>'col-sm-10','value'=>CRUDBooster::myName()];
-			//$this->form[] = ['label'=>'Instansi','name'=>'id_penyidik','type'=>'hidden','validation'=>'required','width'=>'col-sm-9','value'=>CRUDBooster::myId()];
-			//$this->form[] = ['label'=>'Tgl Surat','name'=>'tgl_surat','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Jenis Surat','name'=>'jenis_surat','type'=>'select2','validation'=>'required','width'=>'col-sm-9','dataenum'=>'IZIN PENGGELEDAHAN;PERSETUJUAN PENGGELEDAHAN;PENOLAKAN IZIN PENGGELEDAHAN'];
-			//$this->form[] = ['label'=>'Nama','name'=>'nama','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Tempat Lahir','name'=>'tempat_lahir','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Umur','name'=>'umur','type'=>'date','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Jenis Kelamin','name'=>'jenis_kelamin','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'LAKI-LAKI;PEREMPUAN'];
-			//$this->form[] = ['label'=>'Kebangsaan','name'=>'kebangsaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Tempat Tinggal','name'=>'tempat_tinggal','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Agama','name'=>'agama','type'=>'select','validation'=>'required','width'=>'col-sm-9','dataenum'=>'ISLAM;KRISTEN;KATOLIK;HINDU;BUDHA'];
-			//$this->form[] = ['label'=>'Pekerjaan','name'=>'pekerjaan','type'=>'text','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Surat permohonan geledah','name'=>'file_1','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'dokumen laporan polisi','name'=>'file_2','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'surat perintah penyelidikan','name'=>'file_3','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'surat perintah geledah','name'=>'file_4','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'surat perintah dimulainya penyidikan','name'=>'file_5','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'berita acara','name'=>'file_6','type'=>'upload','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','validation'=>'required','width'=>'col-sm-9','readonly'=>'1','value'=>'BARU'];
 			# OLD END FORM
 
 			/* 
@@ -303,12 +259,7 @@
 	    | @id = last insert id
 	    | 
 	    */
-	    public function hook_after_add($id) {     
-			$config{'content'} = "ada permohonan geledah masuk ";
-			$config['to'] = CRUDBooster::adminPath('geledah23');
-			$config ['id_cms_users'] = [1,2];
-			CRUDBooster::sendNotification($config);
-
+	    public function hook_after_add($id) {        
 	        //Your code here
 
 	    }

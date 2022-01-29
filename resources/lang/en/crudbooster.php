@@ -1,14 +1,14 @@
 <?php
 return [
     'email_footer' => 'Do not reply any email to this email address. This email sent automatically by our system. ',
-    'login_message' => 'Please login to start your session',
-    'text_forgot_password' => 'Forgot the password ?',
-    'page_title_login' => 'Login Panel',
+    'login_message' => 'Silahkan Login Untuk Masuk',
+    'text_forgot_password' => 'Lupa Password ?',
+    'page_title_login' => 'Permohonan Izin Online',
     'page_title_forgot' => 'Forgot Password',
     'forgot_message' => 'Enter your email address, to request password',
     "forgot_text_try_again" => "Try login again ?",
     'text_no_notification' => "You have 0 notifications",
-    'text_view_all_notification' => 'View All',
+    'text_view_all_notification' => 'Lihat semua',
     'label_button_profile' => "Profile",
     'filter_dialog_title' => 'Advanced Sort & Filter',
     'there_is_no_option' => 'There is no any options setting for this inputType',
@@ -128,7 +128,7 @@ return [
     'import_page_title' => 'Import Data :module',
     'dashboard_default_text' => 'Welcome to the dashboard of :appname',
     'form_back_to_list' => 'Back To List Data :module',
-    'not_logged_in' => 'You are not logged in !',
+    'not_logged_in' => 'Kamu belum Login !',
     'menu_navigation' => "Navigation",
     'table_data_not_found' => "No Data Avaliable",
     "notice_delete_file_upload" => "* If you want to upload other file, please first delete the file.",
@@ -170,7 +170,7 @@ return [
     'Log_User_Access' => 'Log User Access',
     'SUPERADMIN' => 'SUPERADMIN',
 
-    'click_here' => 'Click here',
+    'click_here' => 'Klik Disini',
 
     /*
      * this is for html direction to use in html and css classes like :
@@ -185,8 +185,8 @@ return [
     'copyright' => 'Copyright',
     'powered_by' => 'Powered by',
 
-    'notification_you_have' => 'You Have',
-    'notification_notification' => 'Notifications',
+    'notification_you_have' => 'Kamu punya',
+    'notification_notification' => 'Notifikasi',
     'notification_new' => 'You have a new notification !',
 
     'login_register_style' => 'Login Register Style',
